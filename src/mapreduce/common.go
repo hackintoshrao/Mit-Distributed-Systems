@@ -31,6 +31,12 @@ type KeyValue struct {
 	Value string
 }
 
+// KeyValues is a type used to aggregate all the values for a given key.
+type KeyValues struct {
+	Key    string
+	Values []string
+}
+
 // reduceName constructs the name of the intermediate file which map task
 // <mapTask> produces for reduce task <reduceTask>.
 func reduceName(jobName string, mapTask int, reduceTask int) string {
